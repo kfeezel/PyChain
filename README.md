@@ -1,5 +1,5 @@
 # PyChain
-Catenane Chain Building Script
+Catanane Chain Building Script
 
 Kevin Feezel
 University of Akron
