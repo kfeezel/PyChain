@@ -16,20 +16,22 @@
 import math
 import sys
 import os
+import time
 
 __title__ = 'PyChain - Catanane Chain Builder'
 __version__ = '2.6'
 __author__ = 'Kevin Feezel'
 __university__ = 'University of Akron'
-__copywrite__ = '2018 %s' % (__author__)
+__copywrite__ = '2018'
 
 def main():
+	
 	global num_chains
 	global identical
 	global axis
 	global length
 
-	print('\n%s\n%s\n%s\n%s' % (__title__,__author__,__university__,__copywrite__))
+	print('\n%s\n%s\n%s\n%s\n' % (__title__,__author__,__university__,__copywrite__))
 
 	#print("""\nNotes:
 	#Greater than 5 points per chain link is recommended.\n""")
@@ -178,8 +180,10 @@ def main():
 
 	else: 
 		print("\nToo many command line arguments, please check %s for instructions on how to execute this code." % (os.path.basename(__file__)))
-		sys.exit()
-
+		return None
+	
+	start_time = time.time()
+	
 	#I/O
 	cout = open("cantanane.lammpsdata", "w")
 	cout.close()
@@ -481,5 +485,22 @@ def main():
 			cout.write("\n%s" % (c))
 
 	cout.close()
-if __name__ == '__main__':
+	
+	end_time = time.time()
+	
+	duration = end_time-start_time
+	
+	if duration < 60:
+		unit = 'seconds'
+	elif duration < 3600:
+		duration = (duration/60)
+		unit = 'minutes'
+	else:
+		duration = ((duration)/60)/60
+		unit = 'hours'
+	
+	print("\nFinished creating catanane chains in: %f %s." % (duration, unit))
+	
+if __name__ == '__main__': 
+
 	main()
