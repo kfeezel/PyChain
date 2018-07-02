@@ -23,7 +23,7 @@ __author__ = 'Kevin Feezel'
 __university__ = 'University of Akron'
 __copywrite__ = '2018 %s' % (__author__)
 
-def main()
+def main():
 	global num_chains
 	global identical
 	global axis
