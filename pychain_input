@@ -1,0 +1,35 @@
+Pychain Input File
+
+Total number of chain "links"/"rings"
+2
+
+Are the chain "links"/"rings" identical or non-identical (different number of points per chain/distance between points)
+N
+
+Axis
+X
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Enter number of points that compose one chain link and distance between points in the following format: 4 64
+Use one line per chain link in the above format (one space between)                                     distance(A) # points
+If chain links are identical, use the following:
+
+
+Chains
+4.0000 64
+
+If chain links are nonidentical, use the following:
+
+Chain_1
+2.7 12
+Chain_2
+3 36
+Chain_3
+4.1222 64
+Chain_4
+5 25
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+If you change the formatting/spacing or text instructions in this file, the script may not work. Trim trailing spaces.
+
+*Check the readme for more information*
